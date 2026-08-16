@@ -41,8 +41,11 @@ author = 'Eljaaa Rezeah'
 
 #FUNCTIONS
 def main():
-    while True:
-      menu()
+    try:
+        while True:
+            menu()
+    except KeyboardInterrupt:
+        print(f"\n{YELLOW}Program terminated.{RESET}")
 
 def clrScr():
     os.system('cls' if os.name == 'nt' else 'clear')
